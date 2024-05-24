@@ -18,8 +18,9 @@ int main()
         {
             system("cls");
             menu();
+             
             printf("\nNhap lua chon cua ban: ");
-        	while((getchar()) != '\n');
+        	while (getchar() != '\n'); 
         	scanf("%c", &sel);
             //sel = getche();
             switch(sel)
@@ -68,6 +69,7 @@ int main()
                     char id_search[20] = "\0";
                     bool flag = 0;
                     printf("\nNhap id sinh vien can tim: ");
+                    while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
                     fgets(id_search, sizeof(id_search), stdin);
                     id_search[strlen(id_search) - 1] = '\0';
                     result = search(list, quantity, &flag, id_search);
@@ -92,6 +94,7 @@ int main()
                 {
                     char id_delete[20] = "\0";
                     printf("\nNhap id sinh vien can xoa: ");
+                    while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
                     fgets(id_delete, sizeof(id_delete), stdin);
                     id_delete[strlen(id_delete) - 1] = '\0';
                     delete_student(list, &quantity, id_delete);
@@ -101,6 +104,7 @@ int main()
                 {
                     char id_edit[20] = "\0";
                     printf("\nNhap id sinh vien can sua: ");
+                    while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
                     fgets(id_edit, sizeof(id_edit), stdin);
                     id_edit[strlen(id_edit) - 1] = '\0';
                     edit_student(list, quantity, id_edit);
@@ -119,8 +123,9 @@ int main()
 				}
 
             }
-            printf("\nDo you wanna continue?(yes/no)\n");
             
+            printf("\nDo you wanna continue?(yes/no)\n");
+            //while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
             scanf("%s", answer);
         }
         
