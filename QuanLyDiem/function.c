@@ -97,7 +97,8 @@ void display(SinhVien *list, int quality)
     printf("------------------------------------------------------------------------------------------------\n");
     for(int i = 0; i < quality; i++)
     {
-        printf("%-5d %-20s %-10s %-8.2f %-8.2f %-5s\n", i + 1, list[i].name, list[i].id, list[i].diemQT, list[i].diemCK,list[i].diemChu);
+        printf("%-5d %-20s %-10s %-8.2f %-8.2f %-5s\n", i + 1, list[i].name, list[i].id, list[i].diemQT, 
+		list[i].diemCK,list[i].diemChu);
     }
 }
 void sort_name(SinhVien *list, int quality)
@@ -129,7 +130,8 @@ void write_output(SinhVien *list, int quality, FILE *file)
     fprintf(file,"------------------------------------------------------------------------------------------------\n");
     for(int i = 0; i < quality; i++)
     {
-        fprintf(file, "%-5d %-20s %-10s %-8.2f %-8.2f %-5s\n", i + 1, list[i].name, list[i].id, list[i].diemQT, list[i].diemCK,list[i].diemChu);
+        fprintf(file, "%-5d %-20s %-10s %-8.2f %-8.2f %-5s\n", i + 1, list[i].name, list[i].id, list[i].diemQT,
+		list[i].diemCK,list[i].diemChu);
     }
     printf("\nWrite output successfully");
 }

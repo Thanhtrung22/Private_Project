@@ -104,7 +104,8 @@ int main()
                 {
                     char id_edit[20] = "\0";
                     printf("\nNhap id sinh vien can sua: ");
-                    while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
+                    
+					while (getchar() != '\n');  // Tiêu thụ hết các ký tự trong bộ đệm
                     fgets(id_edit, sizeof(id_edit), stdin);
                     id_edit[strlen(id_edit) - 1] = '\0';
                     edit_student(list, quantity, id_edit);
