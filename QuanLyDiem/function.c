@@ -85,6 +85,7 @@ void read_input_file(SinhVien *list,  int *quality, FILE *file)
         scanf("%f", &list[count].diemCK);
         convert_point(&list[count]);
         count++;
+        while(getchar() != '\n');
     }
     *quality = count;
     token = NULL;
